@@ -62,11 +62,11 @@ df = df[:1] # Selects only the first row (the user input data)
 
 st.write(input_df)
 # Reads in saved classification model
-load_clf = pickle.load(open('Random_forest_model.pkl', 'rb'))
+upload_clf = pickle.load(open('Random_forest_model.pkl', 'rb'))
 
 # Apply model to make predictions
-prediction = load_clf.predict(df)
-prediction_proba = load_clf.predict_proba(df)
+prediction = upload_clf.predict(df)
+prediction_proba = upload_clf.predict_proba(df)
 
 
 st.subheader('Prediction')
